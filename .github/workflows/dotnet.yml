@@ -19,6 +19,6 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./server
     - name: Build
-      run: dotnet publish -c Release -o /etc/web/server --self-contained --runtime linux-x64 --no-restore
+      run: dotnet publish ./server -c Release -o /etc/web/server --self-contained --runtime linux-x64 --no-restore
