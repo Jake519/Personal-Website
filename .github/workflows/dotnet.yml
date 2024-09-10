@@ -20,5 +20,7 @@ jobs:
         dotnet-version: 8.0.x
     - name: Restore dependencies
       run: dotnet restore ./server
+    - name: Delete old server
+      run: rm -r /etc/web/server/*
     - name: Build
-      run: dotnet publish ./server -c Release -o /etc/web/server --self-contained --runtime linux-x64 --no-restore
+      run: dotnet publish ./server -c Release --self-contained --runtime linux-x64 --no-restore
