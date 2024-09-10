@@ -1,0 +1,41 @@
+@page "/projects"
+@*@rendermode @(new InteractiveServerRenderMode(prerender: true))*@
+@inherits LayoutComponentBase
+@attribute [StreamRendering(true)]
+
+<PageTitle>Projects</PageTitle>
+
+@if (projects is not null) {
+    @if (!projects.Error) {
+        <h1>Projects</h1>
+    }
+}
+
+<div class="projects-center">
+    @if (projects is not null)
+    {
+        if (projects.Projects.Count == 0 || projects.Error)
+        {
+            <div class="error-container">
+                <p>Error loading projects, try again later.<br />You can also view my projects by visiting my <a href="https://github.com/Jake519?tab=repositories" target="_none" class="non-decorative-link">GitHub</a> page!</p>
+            </div>
+        }
+        else
+        {
+            <ProjectsSection Projects="@projects" />
+        }
+    }
+    else
+    {
+        <Loader />
+    }
+</div>
+
+@code {
+    private ProjectList? projects;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        projects = await ProjectService.GetProjects();
+    }
+}

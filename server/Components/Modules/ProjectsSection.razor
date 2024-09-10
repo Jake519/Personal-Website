@@ -1,0 +1,14 @@
+@inherits LayoutComponentBase
+@namespace server.Components.Modules
+
+<div class="d-flex justify-content-around projects-container">
+    @foreach (Project project in Projects.Projects)
+    {
+        <ProjectCard Project=@project />
+    }
+</div>
+
+@code {
+    [Parameter]
+    public required ProjectList Projects { get; set; }
+}

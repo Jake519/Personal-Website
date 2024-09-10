@@ -1,0 +1,42 @@
+@inherits LayoutComponentBase
+@namespace server.Components.Modules
+@using server.Services
+@inject IScrollInfoService scrollInfoService
+@implements IDisposable
+
+<div class="container" hidden="@hidden">
+	<div class="field">
+		<div class="scroll"></div>
+	</div>
+</div>
+
+@code {
+	private bool hidden;
+    protected override void OnInitialized()
+    {
+        scrollInfoService.OnScroll += OnScroll;
+		ShowAnimation();
+    }
+
+	private void ShowAnimation() {
+		hidden = false;
+	}
+
+    private void OnScroll(object? sender, int yValue)
+    {
+		if (yValue > 1)
+		{
+			hidden = true;
+		}
+		else
+		{
+			hidden = false;
+		}
+		Console.WriteLine(yValue);
+    }
+
+    public void Dispose()
+    {
+        scrollInfoService.OnScroll -= OnScroll;
+    }
+}

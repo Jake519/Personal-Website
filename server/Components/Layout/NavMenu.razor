@@ -1,0 +1,42 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Jacob Lucas</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <i class="fa-solid fa-user"></i>&nbsp; About
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="projects">
+                <i class="fa-solid fa-diagram-project"></i>&nbsp; Projects
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="https://www.linkedin.com/in/jacob-lucas-10b373216" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>&nbsp; LinkedIn
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="https://github.com/Jake519" target="_blank">
+                <i class="fa-brands fa-github"></i>&nbsp; GitHub
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="contact">
+                <i class="fa-solid fa-envelope"></i>&nbsp; Contact
+            </NavLink>
+        </div>
+    </nav>
+</div>
+

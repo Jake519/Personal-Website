@@ -1,0 +1,21 @@
+@inherits LayoutComponentBase
+@namespace server.Components.Modules
+
+<div class="project-card">
+    <div class="background-gradient">
+        <div class="project-card-content">
+            <div class="project-card-text">
+                <h2 class="project-name">@project.Name</h2>
+                <p class="project-description">@project.Description</p>
+            </div>
+        </div>
+        <div class="project-card-button">
+            <a href="@project.Link" target="_blank" class="card-link">Go To Project</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public required Project project { get; set; }
+}

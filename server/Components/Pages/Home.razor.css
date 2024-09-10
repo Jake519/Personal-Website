@@ -1,0 +1,76 @@
+#name-tag {
+    font-size: 9vmin;
+    color: white;
+    font-weight: bold;
+    align-items: end;
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+#headshot {
+    border-radius: 50%;
+    width: 50vmin;
+    border: 8px solid rgb(54,69,79);
+}
+
+.link-tree-text {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgba(129,0,237,1) 0%, rgba(48,75,255,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.link-tree-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: rgb(110,127,128);
+    padding: 0.5rem;
+    border-radius: 10px;
+    text-wrap: none;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.emphasize {
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.spacer {
+    height: 1rem;
+    width: 1rem;
+}
+
+.welcome-section {
+    padding: 0;
+}
+
+.section-text {
+    text-indent: 4em;
+    font-size: 1.1rem;
+}
+
+.sections {
+    width: 90%;
+}
+
+@media (min-width: 641px) {
+    .welcome-section {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 640.98px) {
+    .welcome-section {
+        min-height: calc(100vh - 3.5rem);
+    }
+}
