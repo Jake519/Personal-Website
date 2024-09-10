@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (builder.Environment.IsProduction())
 {
-    builder.WebHost.UseWebRoot("./wwwroot");
+    builder.WebHost.UseWebRoot("/etc/web/server/net8.0/linux-x64/publish/wwwroot");
 }
 
 // Add services to the container.
