@@ -3,6 +3,11 @@ using server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+if (builder.Environment.IsProduction())
+{
+    builder.WebHost.UseWebRoot("./wwwroot");
+}
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
