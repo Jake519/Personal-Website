@@ -9,11 +9,11 @@
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <OutputPath>/etc/web/server</OutputPath>
+    <WebRootPath>/etc/web/server/net8.0/linux-x64/publish/wwwroot</WebRootPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <WebRootPath>/etc/web/server/net8.0/linux-x64/publish/wwwroot</WebRootPath>
   </ItemGroup>
 
 </Project>
