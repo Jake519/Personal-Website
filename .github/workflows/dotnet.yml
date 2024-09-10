@@ -21,6 +21,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./server
     - name: Delete old server
-      run: rm -r /etc/web/server/*
+      run: rm -rf /etc/web/server/*
     - name: Build
       run: dotnet publish ./server -c Release --self-contained --runtime linux-x64 --no-restore
