@@ -1,8 +1,8 @@
 #name-tag {
-    font-size: 9vmin;
+    font-size: 8vmin;
     color: white;
     font-weight: bold;
-    align-items: end;
+    align-items: center;
     font-family: "Playwrite BE VLG", cursive;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -55,12 +55,19 @@
 }
 
 .section-text {
-    text-indent: 4em;
     font-size: 1.1rem;
 }
 
 .sections {
     width: 90%;
+}
+
+.small-spacer {
+    height: 10px;
+}
+
+.section-spacer {
+    height: 4rem;
 }
 
 @media (min-width: 641px) {

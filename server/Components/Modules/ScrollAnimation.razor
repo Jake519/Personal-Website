@@ -4,7 +4,8 @@
 @inject IScrollInfoService scrollInfoService
 @implements IDisposable
 
-<div class="container" hidden="@hidden">
+
+<div class="scroll-animation-container" hidden="@hidden">
 	<div class="field">
 		<div class="scroll"></div>
 	</div>
@@ -20,19 +21,20 @@
 
 	private void ShowAnimation() {
 		hidden = false;
+		StateHasChanged();
+	}
+
+	private void HideAnimation() {
+		hidden = true;
+		StateHasChanged();
 	}
 
     private void OnScroll(object? sender, int yValue)
     {
 		if (yValue > 1)
 		{
-			hidden = true;
+			HideAnimation();
 		}
-		else
-		{
-			hidden = false;
-		}
-		Console.WriteLine(yValue);
     }
 
     public void Dispose()
